@@ -214,9 +214,15 @@ function displayScenario(scenarioKey) {
 
 // Roll dice function
 function rollDice() {
+  let diceButton = document.querySelector(".dice-button");
+  // Remove previous disabled state if present
+  diceButton.disabled = false;  
   const diceResult = Math.floor(Math.random() * 6) + 1;
   const resultText = document.getElementById("diceResult");
   resultText.innerHTML += `<p>You rolled a ${diceResult}!</p>`;
+  // Disable button to prevent multiple rolls
+  diceButton.disabled = true;
+
 }
 
 // Function to make user choices and move to next scenario
