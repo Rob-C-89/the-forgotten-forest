@@ -26,7 +26,11 @@ const gameScenarios = {
 
 // Function to display scenario
 
-function displayScenario () {
+function displayScenario (scenarioKey = 'start') {
+    const scenario = gameScenarios[scenarioKey];
+    const gameContent = document.getElementById('gameContent');
+    gameContent.innerHTML = `<h2>${scenario.title}</h2><p>${scenario.text}</p>`;
+
 }
 
 // Function to make user choices
@@ -37,7 +41,6 @@ function makeChoice() {
 function restartGame() {
 }
 
-// Initialize game by displaying the first scenario
+// Initialize game by displaying the starting scenario
 displayScenario();
-
-
+    
