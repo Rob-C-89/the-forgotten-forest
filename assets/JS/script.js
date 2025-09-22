@@ -36,13 +36,16 @@ function displayScenario (scenarioKey = 'start') {
         gameContent.innerHTML += `<button onclick="restartGame()">Restart Game</button>`;
     } else {
         scenario.choices.forEach((choice, index) => {
-            gameContent.innerHTML += `<button>${choice.text}</button>`;
+            gameContent.innerHTML += `<button onclick="makeChoice(choices.nextScenario)">${choice.text}</button>`;
         });
     }
 }
 
-// Function to make user choices
-function makeChoice() {
+// Function to make user choices and move to next scenario
+function makeChoice(nextScenarioChoice) {
+    currentScenario = nextScenarioChoice;
+    displayScenario(currentScenario);
+
 }
 
 // Function to restart game 
