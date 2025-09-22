@@ -21,6 +21,7 @@ const gameScenarios = {
     giveUp: {
         title: "The End",
         text: "You decide that this adventure is not for you. You turn around and head back home, where you live a quiet life. Maybe adventure isn't your calling after all.",
+        isEnding: true,
     }
 }
 
@@ -30,7 +31,14 @@ function displayScenario (scenarioKey = 'start') {
     const scenario = gameScenarios[scenarioKey];
     const gameContent = document.getElementById('gameContent');
     gameContent.innerHTML = `<h2>${scenario.title}</h2><p>${scenario.text}</p>`;
-
+    // If scenario is an ending, show restart button. Else, create buttons for choices
+    if (scenario.isEnding) {
+        gameContent.innerHTML += `<button onclick="restartGame()">Restart Game</button>`;
+    } else {
+        scenario.choices.forEach((choice, index) => {
+            gameContent.innerHTML += `<button>${choice.text}</button>`;
+        });
+    }
 }
 
 // Function to make user choices
