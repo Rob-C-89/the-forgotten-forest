@@ -166,6 +166,11 @@ const gameScenarios = {
         text: `You boldly walk towards and over the stone bridge, whistling merrily. Halfway across, a giant, scaly hand grabs you by the boot.
         A troll was hiding under the bridge and is trying to pull you down into the river below! Roll a dice to determine your fate.`,
         rollDice: true,
+        successValue: 4,
+        choices: [
+            {text: "Continue", winScenario: "start", failScenario: "giveUp"},
+        ]
+        
     },
 
     trollFight: {
@@ -194,6 +199,7 @@ function displayScenario(scenarioKey) {
   const gameContent = document.getElementById("gameContent");
 
   gameContent.innerHTML = `<h2>${scenario.title}</h2><p>${scenario.text}</p>`;
+
   // If scenario calls for roll dice, display dice button. Else, if scenario is an ending, show restart button. Else, create buttons for choices
   if (scenario.rollDice) {
     // roll dice placeholder text to be replaced with dice image
@@ -202,7 +208,9 @@ function displayScenario(scenarioKey) {
         <p class="dice-instructions">Click the dice to reveal your fate!</p>
         <button class="dice-button" onclick="rollDice()"> Roll Dice</button>
         <div id="diceResult"></div>
+
     </div>`
+
   } else if (scenario.isEnding) {
     gameContent.innerHTML += `<button onclick="restartGame()">Restart Game</button>`;
   } else {
@@ -213,23 +221,49 @@ function displayScenario(scenarioKey) {
 }
 
 // Roll dice function
+
 function rollDice() {
   let diceButton = document.querySelector(".dice-button");
   // Remove previous disabled state if present
   diceButton.disabled = false;  
   const diceResult = Math.floor(Math.random() * 6) + 1;
   const resultText = document.getElementById("diceResult");
-  resultText.innerHTML += `<p>You rolled a ${diceResult}!</p>`;
-  // Disable button to prevent multiple rolls
+ 
+
+  resultText.innerHTML += 
+  `<div>
+  <p>You rolled a ${diceResult} !</p>
+  <button class ="continue-button">Continue</button>
+  </div>`;
+  
+    // Disable button to prevent multiple rolls
   diceButton.disabled = true;
 
+  // Add event listener to continue button (for continueAfterRoll function)
+  let continueButton = document.querySelector(".continue-button");
+  continueButton.addEventListener("click", continueAfterRoll);
+
+
+// funtion to continue after rolling dice
+    function continueAfterRoll()  {
+    const scenario = gameScenarios[currentScenario];
+    if (diceResult >= scenario.successValue) {
+      currentScenario = scenario.choices[0].winScenario;
+    } else {
+      currentScenario = scenario.choices[0].failScenario;
+    }
+    displayScenario(currentScenario);
+  }
 }
+
 
 // Function to make user choices and move to next scenario
 function makeChoice(nextScenarioChoice) {
   currentScenario = nextScenarioChoice;
   displayScenario(currentScenario);
 }
+
+
 
 // Function to restart game by resetting to the starting scenario
 function restartGame() {
