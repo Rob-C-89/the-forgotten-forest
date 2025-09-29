@@ -35,7 +35,7 @@ const gameScenarios = {
 
   // Right path scenarios
     rightPath: {
-    title: "Your first coin",
+    title: "Your First Coin",
     text: `You follow the path to the right, your boots crunching on the twigs, leaves and the odd small animal bone. 
     After a while, you hear a metallic clink and look down. A glittering golden coin twinkles back at you. What do you do?`,
     choices: [
@@ -72,7 +72,7 @@ const gameScenarios = {
   },
 
   riddle: {
-    title: "Riddles in the wood",
+    title: "Riddles in the Wood",
     text: `The old man chuckles. "A fair answer! Well, let's play for it, shall we? If you can answer my riddle, 
     the coin is yours. If not, I'll be taking it!"
     You nod and cross your arms, waiting for the riddle.
@@ -86,7 +86,7 @@ const gameScenarios = {
     },
 
     riddleWrong: {
-        title: "Easy come, easy go",
+        title: "Easy Come, Easy Go",
         text: `The old man giggles. "Wrong! The answer was a river. You might want to sharpen your mind a little 
         if you're to get anywhere in this forest! Thanks for the treasure!"
         He pulls his hand out of his robe, revealing a glittering coin in his wizened fingers. 
@@ -98,7 +98,7 @@ const gameScenarios = {
     },
 
     riddleCorrect: {
-        title: "A wise choice",
+        title: "A Wise Choice",
         text: `The old man smiles, although his right eye twitches with a hint of disappointment. 
         "Correct! A river indeed. You have a sharp mind, traveller. The coin is yours. I expect we'll meet again..."
         You nod, pocket the coin and continue on your quest.`,
@@ -108,7 +108,7 @@ const gameScenarios = {
     },
 
     oldManThanks: {
-    title: "Kindness rewarded",
+    title: "Kindness Rewarded",
     text: `You hand over the coin. The frail old man in his rags looks like he needs it more than you do. "You have a kind and brave heart, adventurer.
     It will protect you against many of the dangers in this forest. For everything else, take this."
     He reaches into his robe and pulls out an ornate, horned helmet of brass and silver. Stunned by the princely gift, you 
@@ -120,7 +120,7 @@ const gameScenarios = {
 
   // Left path scenarios
     leftPath: {
-        title: "The river",
+        title: "The River",
         text: `You follow the path to the left, leading you along the river, away from the willow tree. The forest thins out,
         and you see the sky above you is blue. Feeling a little more hopeful, you come to a bridge crossing the river. What do you do?`,
         choices: [
@@ -141,7 +141,7 @@ const gameScenarios = {
     },
 
     sneakAway: {
-        title: "Sneaky does it!",
+        title: "Sneaky Does it!",
         text: `As quietly as you can, you stand up and tiptoe back the way you came, your heart pounding beneath your chainmail shirt.
         Once you think youre at a safe distance, you break into a run, past the willow tree, and up the path to the right.`,
         choices: [
@@ -150,7 +150,7 @@ const gameScenarios = {
     },
 
     riverCross: {
-        title: "Discretion and the better part of valour",
+        title: "Discretion and the Better Part of Valour",
         text: `Remembering a lesson from your wise but perhaps not-so-heroic uncle, you decide not to risk a full frontal assault 
         on the river troll. Instead, you walk upstream a while, then lower yourself into the chilly waters. 
         To make yourself light enough to swim, you discard your chainmail shirt - a painful sacrifice, but surely less painful than
@@ -162,7 +162,7 @@ const gameScenarios = {
     },
 
     trollAmbush: {
-        title: "Troll ambush!",
+        title: "Troll Ambush!",
         text: `You boldly walk towards and over the stone bridge, whistling merrily. Halfway across, a giant, scaly hand grabs you by the boot.
         A troll was hiding under the bridge and is trying to pull you down into the river below! Roll a dice to determine your fate.`,
         rollDice: true,
@@ -174,7 +174,7 @@ const gameScenarios = {
     },
 
     trollFight: {
-        title: "Surprise attack!",
+        title: "Surprise Attack!",
         text: `With your sword drawn, you advance on the troll from behind. You catch the beast completely off guard, 
         and with almost no effort you slay the creature before it can draw its club. Wiping the green blood off your sword, you
         rifle throught a leather pouch hanging from it's neck. Inside you find five glittering gold coins and a small key.
