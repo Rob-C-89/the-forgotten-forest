@@ -129,6 +129,34 @@ const gameScenarios = {
         ],
       },
 
+    trollAmbush: {
+        title: "Troll Ambush!",
+        text: `You boldly walk towards and over the stone bridge, whistling merrily. Halfway across, a giant, scaly hand grabs you by the boot.
+        A troll was hiding under the bridge and is trying to pull you down into the river below! Roll a dice to determine your fate.`,
+        rollDice: true,
+        successValue: 4,
+        choices: [
+            {text: "Continue", winScenario: "trollWin", failScenario: "trollLose" },
+        ]
+        
+    },
+
+    trollWin: {
+        title: "I Want to Break Free",
+        text: `You struggle against the troll's grip, as it pulls you towards the water. It heaves you off the bridge, but you cling on with your 
+        hands. Fighting for your very life, you kick wildly and by some chance of fate, land a powerful blow to the troll's crooked nose.
+        It howls in pain and release you. You scramble back onto the bridge and flee across, once again plunging deeper into the forest`,
+        choices: [
+            { text: "Continue", nextScenario: "theTunnel" },
+        ]
+    },
+
+    trollLose: {
+        title: "Troll-food",
+        text: `You struggle with all your might, but the troll is too strong. It drags you down into the river, and your adventure is at an end...`,
+        isEnding: true,
+    },
+
     seeTroll: {
         title: "Troll! Uh oh...",
         text: `With your back to the trees, you take a seat on the grassy banks of the river and take your last piece of bread from your backpack.
@@ -139,6 +167,8 @@ const gameScenarios = {
             { text: "Draw your sword and approach the bridge", nextScenario: "trollFight" },
         ]
     },
+
+    
 
     sneakAway: {
         title: "Sneaky Does it!",
@@ -161,17 +191,6 @@ const gameScenarios = {
         ]
     },
 
-    trollAmbush: {
-        title: "Troll Ambush!",
-        text: `You boldly walk towards and over the stone bridge, whistling merrily. Halfway across, a giant, scaly hand grabs you by the boot.
-        A troll was hiding under the bridge and is trying to pull you down into the river below! Roll a dice to determine your fate.`,
-        rollDice: true,
-        successValue: 4,
-        choices: [
-            {text: "Continue", winScenario: "start", failScenario: "giveUp"},
-        ]
-        
-    },
 
     trollFight: {
         title: "Surprise Attack!",
