@@ -4,11 +4,14 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: black;    
+    background-image: url('../images/forest-path.png');
+    background-size: cover;
+    /*background-color: black; */
 }
 
 .header {
     background-color: #f8f9fa;
+    border: 3px solid;
     text-align: center;
     font-family: 'Libre Baskerville', serif;
     font-size: 20px;
@@ -23,6 +26,7 @@ h2 {
 #gameContent {
     margin: 40px;
     padding: 20px;
+    border: 3px solid;
     border-radius: 5px;
     background-color: #f8f9fa;
 }
@@ -70,5 +74,5 @@ button:hover {
     margin: 40px;
     padding: 20px;
     text-align: right;
-   }
+}
 
