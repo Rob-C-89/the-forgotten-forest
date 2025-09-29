@@ -196,15 +196,15 @@ let currentScenario = "start";
 
 function displayScenario(scenarioKey) {
   const scenario = gameScenarios[scenarioKey];
-  const gameContent = document.getElementById("gameContent");
+  const gameContent = document.getElementById("scenarioContent");
 
-  gameContent.innerHTML = `<h2>${scenario.title}</h2><p>${scenario.text}</p>`;
+  scenarioContent.innerHTML = `<h2>${scenario.title}</h2><p>${scenario.text}</p>`;
 
   // If scenario calls for roll dice, display dice button. Else, if scenario is an ending, show restart button. Else, create buttons for choices
   if (scenario.rollDice) {
     // roll dice placeholder text to be replaced with dice image
-    gameContent.innerHTML += 
-    `<div class="dice-container">
+    scenarioContent.innerHTML += 
+    `<div class="dice-container" id="diceContent">
         <p class="dice-instructions">Click the dice to reveal your fate!</p>
         <button class="dice-button" onclick="rollDice()"> Roll Dice</button>
         <div id="diceResult"></div>
@@ -212,11 +212,16 @@ function displayScenario(scenarioKey) {
     </div>`
 
   } else if (scenario.isEnding) {
-    gameContent.innerHTML += `<button onclick="restartGame()">Restart Game</button>`;
+    scenarioContent.innerHTML += `<div class="ending-container" id="endingContent">
+    <button onclick="restartGame()">Restart Game</button>
+    </div>`;
+
   } else {
+    scenarioContent.innerHTML += `<div class="choices-container" id="choicesContent">`;
     scenario.choices.forEach((choice, index) => {
-      gameContent.innerHTML += `<button onclick="makeChoice('${choice.nextScenario}')">${choice.text}</button>`;
+      choicesContent.innerHTML += `<button onclick="makeChoice('${choice.nextScenario}')">${choice.text}</button>`;
     });
+    scenarioContent.innerHTML += `</div>`;
   }
 }
 
