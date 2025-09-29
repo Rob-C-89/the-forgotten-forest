@@ -203,7 +203,44 @@ const gameScenarios = {
         ]
     },
 
+    // Scenarios starting from the tunnel
+    theTunnel: {
+    title: "The Tunnel",
+    text: `After hours of walking, reflecting on your adventure's trials so far, the light is beginning to fade. Just as you
+    start to consider making camp for the night, you see a faint glow ahead. Approching cautiously, you come to a stone cave
+    amongst the trees, its entrance lit by flickering torches. You light your own torch on the flames, and gaze inside. There
+    seems to be a tunnel leading deep into the earth. What do you do?`,
+    choices: [
+      { text: "Enter the tunnel", nextScenario: "theLongDark" },
+      { text: "Decide it's too dangerous and turn back", nextScenario: "giveUp" },
+    ],
+  },
 
+  theLongDark: {
+    title: "The Long Dark",
+    text: `You step into the tunnel, sword in one hand, blazing torch in the other. The orange light flickers in the dark, 
+    revealing slimy stone walls, riddled with moss and dripping with water. The air is damp and earthy. As you venture deeper into the earth,
+    the tunnel grows lower and more narrow, until you are forced to crouch. You come to a fork in the tunnel - a faint smell of smoke coming from one
+    passage, and a cold draft from the other. Which way do you go?`,
+    choices: [
+      { text: "Follow the smell of smoke", nextScenario: "smoke" },
+      { text: "Go towards the cold draft", nextScenario: "draft" },
+    ],
+  },
+
+  // Smoke tunnel scenarios
+
+  smoke: {
+    title: "The Smell of Smoke",
+    text: `You follow the smell of smoke, your footsteps echoing on the stony floor. After a while, the scent changes - you smell
+    roasting meat! Your stomach gurgles in response - you haven't eaten in hours. The passage opens up into a cavern - there is a 
+    way clinging to the wall, climbing up towards a ledge. There is also a path leading around a corner, staying at the same height.
+    Which do you take?`,
+    choices: [
+      { text: "Climb the way up to the ledge", nextScenario: "highRoad" },
+      { text: "Follow the path around the corner", nextScenario: "lowRoad" },
+    ],
+  }
 
 };
 
