@@ -237,7 +237,7 @@ function rollDice() {
 
   resultText.innerHTML += 
   `<div>
-  <p>You rolled a ${diceResult} !</p>
+  <p>You rolled a ${diceResult}!</p>
   <button class ="continue-button">Continue</button>
   </div>`;
   
