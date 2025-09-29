@@ -232,6 +232,8 @@ function displayScenario(scenarioKey) {
 
   } else if (scenario.isEnding) {
     scenarioContent.innerHTML += `<div class="ending-container" id="endingContent">
+    <h2>Your adventure ends here</h2>
+    <p>Would you like to play again?</p>
     <button onclick="restartGame()">Restart Game</button>
     </div>`;
 
