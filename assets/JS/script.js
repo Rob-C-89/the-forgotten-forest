@@ -206,7 +206,7 @@ function displayScenario(scenarioKey) {
     scenarioContent.innerHTML += 
     `<div class="dice-container" id="diceContent">
         <p class="dice-instructions">Click the dice to reveal your fate!</p>
-        <button class="dice-button" onclick="rollDice()"> Roll Dice</button>
+        <button class="dice-button" onclick="rollDice()"></button>
         <div id="diceResult"></div>
 
     </div>`
