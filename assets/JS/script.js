@@ -347,7 +347,7 @@ const gameScenarios = {
     title: "End of Chapter One!",
       text: `Congratulations on making it so far! This is the end of the first chapter of The Forgotten Forest. Chapter Two will be coming
       soon. In the meantime, would you like to play again?`,
-    isEnding: true,
+    isChapterEnding: true,
   }
 
 
@@ -380,6 +380,11 @@ function displayScenario(scenarioKey) {
     scenarioContent.innerHTML += `<div class="ending-container" id="endingContent">
     <h2>Your adventure ends here</h2>
     <p>Would you like to play again?</p>
+    <button onclick="restartGame()">Restart Game</button>
+    </div>`;
+
+    } else if (scenario.isChapterEnding) {
+    scenarioContent.innerHTML += `<div class="ending-container" id="endingContent">
     <button onclick="restartGame()">Restart Game</button>
     </div>`;
 
