@@ -1,12 +1,12 @@
 /* Google Fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Metamorphous&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap');
 
+/* General style rules */
 
 body {
     font-family: Arial, sans-serif;
     background-image: url('../images/forest-path.png');
     background-size: cover;
-    /*background-color: black; */
 }
 
 .header {
@@ -17,6 +17,7 @@ body {
     font-size: 20px;
     font-weight: bold;
     padding-top: 15px;
+    margin: 15px;
 }
 
 h2 {
@@ -27,10 +28,14 @@ p {
     font-size: 16px;
 }
 
+/* Wizard image styling */
+
 .wizard-logo {
     width: 70px;
     height: auto;
 }
+
+/* Container styling */
 
 #gameContent {
     margin: 40px;
@@ -54,6 +59,7 @@ p {
     text-align: center;
 }
 
+/* Button styling */
 button {
     border: 2px solid;
     padding: 10px 20px;
@@ -81,6 +87,7 @@ button:hover {
 
 }
 
+/* Audio player styling */
 .audio-content {
     margin: 40px;
     padding: 20px;
