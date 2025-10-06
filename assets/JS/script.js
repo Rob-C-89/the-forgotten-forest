@@ -228,6 +228,40 @@ const gameScenarios = {
     ],
   },
 
+  // Draft tunnel scenarios
+
+  draft: {
+    title: "The Door",
+    text: `You trudge along the subterranean path, for what seems like an age. Eventually, you come to a stone door. It is perhaps
+    four feet tall, made with care and skill, inset with semi-precious stones and carved with what you recognise as Dwarven runes.
+    After some inspection, you see it is ever so slightly ajar. Perhaps you could open it with your strength? Roll a dice 
+    to determine the outcome!`,
+    rollDice: true,
+    successValue: 5,
+    choices: [
+      {text: "Continue", winScenario: "doorSuccess", failScenario: "doorFail" },
+   ]
+
+  },
+
+  doorSuccess: {
+    title: "The Way is Open",
+    text: `You call on all your might, straining against the ancient Dwarven structure. Just as you are about to give up, the
+    door gives way. A dull light fills the tunnel, and you continue on your way`,
+    choices: [
+      {text: "Continue", nextScenario: "tunnelExit"},
+    ]
+  },
+
+  doorFail: {
+    title: "The Way is Shut",
+    text: `No matter how hard you try, the door will not budge. Defeated, you turn back the way you came. Once again, you come 
+    to the fork and notice the smell of smoke coming from one way. You turn down it, and deeper into the depths`,
+    choices: [
+      {text: "Continue", nextScenario: "smoke"},
+    ]
+  },
+
   // Smoke tunnel scenarios
 
   smoke: {
