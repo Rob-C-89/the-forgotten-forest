@@ -28,8 +28,7 @@ p {
 }
 
 .wizard-logo {
-    align-items: right;
-    width: 80px;
+    width: 70px;
     height: auto;
 }
 
@@ -85,6 +84,6 @@ button:hover {
 .audio-content {
     margin: 40px;
     padding: 20px;
-    text-align: right;
+    text-align: center;
 }
 
