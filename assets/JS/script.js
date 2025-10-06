@@ -240,7 +240,116 @@ const gameScenarios = {
       { text: "Climb the way up to the ledge", nextScenario: "highRoad" },
       { text: "Follow the path around the corner", nextScenario: "lowRoad" },
     ],
+  },
+
+  // High road scenarios
+
+  highRoad: {
+    title: "The High Road",
+    text: `You clamber up the rocky path, hugging the side of the cavern. Sensing danger, you crouch down as you go, until you are 
+    sneaking along the ridged wall. You hear gruff voices - below you, you see a group of three goblins, huddled around a pitiful fire, 
+    roasting a chunk of meat. You see an exit at the other end of the cavern. What do you do?`,
+    choices: [
+      {text: "Draw your bow and attack", nextScenario: "ambushGoblins" },
+      {text: "Sneak past the goblins", nextScenario: "avoidGoblins"}
+    ]
+
+  },
+
+  ambushGoblins: {
+    title: "Ambush the Goblins",
+    text: `You silently draw your bow and take aim at the evil little creatures. You let fly with your arrows, surprising the party below
+    Does your ambush succeed? Roll a dice to determine your fate!`,
+    rollDice: true,
+    successValue: 3,
+    choices: [
+            {text: "Continue", winScenario: "highRoadWin", failScenario: "highRoadLose" },
+    ]
+  },
+
+  highRoadWin: {
+    title: "Arrows from Above",
+    text: `You rain down arrows on the unsuspecting goblins, one after another, until your enemy lies still. They barely had
+    time to ready their weapons. You feel a twinge of pity for them, but bury it as quickly as it came. It was a necessary action.
+    Slingin your bow across your back, you follow the ledge path along and down, towards the exit of the cavern`,
+    choices: [
+      { text: "Continue", nextScenario: "tunnelExit"},
+    ]
+  },
+
+  highRoadLose: {
+    title: "Arrows from Below",
+    text: `Despite your advantage, the goblins return fire with skill and ferocity. They are too many. You hit the party with
+    your own shots, but no more than wounding blows. A barbed arrow hits you in the side, and you know the fight is not yours. 
+    You turn and run, although thankfully the wounded goblins do not chase you. This adventure is beyond you, and you flee
+    all the way back through the tunnel, into the forest, and head for home. At least you leave with your life... `,
+    isEnding: true,
+
+  },
+
+  avoidGoblins: {
+    title: "A Peaceful Choice",
+    text: `The goblins chatter away in their foul language as you creep against the wall of the cavern. They appear to be arguing,
+    or maybe that's just the nature of their tongue. Either way, there will be no battle today, as they remain unaware of your presence.
+    You sneak along the high path, which leads you down to the floor of the cavern on the other side. Rushing from rock
+    to rock, you make it to the exit`,
+    choices: [
+      { text: "Continue", nextScenario: "tunnelExit"},
+    ]
+  },
+
+  // Low road scenarios
+
+  lowRoad: {
+    title: "Towards Danger",
+    text: `You turn around the corner, and right into the camp of three armoured goblins, crouched around a ragged camp. A chunk
+    of meat roasts on a spit. One of the goblins is facing you as you come around - it cries out and grabs its bow. The other
+    creatures wheel around, readying for the fight. Outnumbered, you desperatley charge forward into combat. Roll a dice to 
+    reveal your fate!`,
+    rollDice: true,
+    successValue: 5,
+    choices: [
+            {text: "Continue", winScenario: "lowRoadWin", failScenario: "lowRoadLose" },
+    ]
+  },
+
+  lowRoadWin: {
+    title: "Against All Odds",
+    text: `Fighting for your life against a greater number, you miraculously overpower your foe. Two of the goblins lie still,
+    and the last flees the way you just came, screeching and crying as it runs. The way before you is clear.`,
+    choices: [
+      {text: "Continue", nextScenario: "tunnelExit"},
+    ]
+  },
+
+  lowRoadLose: {
+    title: "Never Had a Chance",
+    text: `You swing wildly with your sword, praying to your Gods as you hack and thrust. The goblins jeer and laugh, knowing
+    they are greater in strength. Though small they are fierce and cunning, surrounding you and attacking from all sides.
+    The sounds of the battle ring briefly through the tunnels, and then silence. Your adventure is over...`,
+    isEnding: true,
+  },
+
+  // Exit the tunnel
+
+  tunnelExit: {
+    title: "Out of the Dark",
+    text: `The challenges of the tunnel are behind you. You see a glow of light coming from the exit, and you climb up out of the 
+    dark. Soon you come out and into a clearing - back in the forest. Exhausted from your adventure so far, and with the moon glowing
+    above you, you decide to make camp. After pitching your tent behind the cover of some bushes, you fall down onto your roll-mat.
+    Proud of your progress, you fall into a deep and dreamless sleep.`,
+    choices: [
+      {text: "Continue", nextScenario: "chapterOneEnd"},
+    ]
+  },
+
+  chapterOneEnd: {
+    title: "End of Chapter One!",
+      text: `Congratulations on making it so far! This is the end of the first chapter of The Forgotten Forest. Chapter Two will be coming
+      soon. In the meantime, would you like to play again?`,
+    isEnding: true,
   }
+
 
 };
 
