@@ -387,7 +387,7 @@ const gameScenarios = {
 
 };
 
-
+// currentScenario is set to Start as default
 
 let currentScenario = "start";
 
@@ -395,7 +395,7 @@ let currentScenario = "start";
 
 function displayScenario(scenarioKey) {
   const scenario = gameScenarios[scenarioKey];
-  const gameContent = document.getElementById("scenarioContent");
+ // const gameContent = document.getElementById("scenarioContent");
 
   scenarioContent.innerHTML = `<h2>${scenario.title}</h2><p>${scenario.text}</p>`;
 
@@ -424,7 +424,7 @@ function displayScenario(scenarioKey) {
 
   } else {
     scenarioContent.innerHTML += `<div class="choices-container" id="choicesContent">`;
-    scenario.choices.forEach((choice, index) => {
+    scenario.choices.forEach((choice) => {
       choicesContent.innerHTML += `<button onclick="makeChoice('${choice.nextScenario}')">${choice.text}</button>`;
     });
     scenarioContent.innerHTML += `</div>`;
