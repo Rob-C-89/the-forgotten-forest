@@ -395,7 +395,6 @@ let currentScenario = "start";
 
 function displayScenario(scenarioKey) {
   const scenario = gameScenarios[scenarioKey];
- // const gameContent = document.getElementById("scenarioContent");
 
   scenarioContent.innerHTML = `<h2>${scenario.title}</h2><p>${scenario.text}</p>`;
 
