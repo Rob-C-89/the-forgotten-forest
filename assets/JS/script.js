@@ -474,7 +474,6 @@ function makeChoice(nextScenarioChoice) {
 }
 
 
-
 // Function to restart game by resetting to the starting scenario
 function restartGame() {
   currentScenario = "start";
