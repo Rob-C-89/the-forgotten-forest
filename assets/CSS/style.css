@@ -4,6 +4,9 @@
 /* General style rules */
 
 body {
+    max-width: 1500px;
+    margin-right: auto;
+    margin-left: auto;
     font-family: Arial, sans-serif;
     background-image: url('../images/forest-path.png');
     background-size: cover;
