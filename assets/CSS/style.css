@@ -91,9 +91,15 @@ button:hover {
 }
 
 /* Audio player styling */
+audio {
+
+    max-width: 200px;
+}
+
 .audio-content {
     margin: 40px;
     padding: 20px;
     text-align: center;
 }
+
 
