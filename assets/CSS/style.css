@@ -78,7 +78,7 @@ button:hover {
 
 /* Dice button styling */
 .dice-button {
-    background-image: url('../images/outline_style_dice.jpg');
+    background-image: url('../images/outline-style-dice.jpg');
     background-size: cover;
     background-position: center;
     width: 45px;
