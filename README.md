@@ -241,6 +241,13 @@ Code passed successfully through W3 CSS validation.
 
 No errors returned on Jshint validation. 
 
+### Lighthouse Test
+
+The wesbsite has been tested using DevTools lighthouse, producing an acceptable result.
+
+![screenshot](https://github.com/Rob-C-89/the-forgotten-forest/blob/main/documentation/lighthouse.png)
+
+
 
 ## Using the Repository
 
@@ -325,6 +332,7 @@ https://fonts.google.com/
 Dice Favicon:
 
 https://fontawesome.com/
+
 
 
 
