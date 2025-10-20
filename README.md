@@ -153,17 +153,12 @@ If none of the above are true, then for each ‘choice’ in the ‘choices’ a
 
 The ‘rollDice’ function:
 
- fetches the dice button by its class using a query selector
-
-un-disables so that if it was previously disabled it will function properly.
-
-creates a ‘diceResult’ constant with a value between one and six, using the Math.floor(Math.random() *6)+1 function
-
-creates innerHTML to display text, the diceResult, and a ‘continue-button’
-
-disables the button to prevent “re-rolling” the dice
-
-adds an event-listener to the ‘continue-button’, which upon click will call the ‘continueAfterRoll’ function.
+- fetches the dice button by its class using a query selector
+- un-disables so that if it was previously disabled it will function properly.
+- creates a ‘diceResult’ constant with a value between one and six, using the Math.floor(Math.random() *6)+1 function
+- creates innerHTML to display text, the diceResult, and a ‘continue-button’
+- disables the button to prevent “re-rolling” the dice
+- adds an event-listener to the ‘continue-button’, which upon click will call the ‘continueAfterRoll’ function.
 
 
 ### Continue After Roll
@@ -330,6 +325,7 @@ https://fonts.google.com/
 Dice Favicon:
 
 https://fontawesome.com/
+
 
 
 
