@@ -383,15 +383,21 @@ const gameScenarios = {
       soon. In the meantime, would you like to play again?`,
     isChapterEnding: true,
   }
-
-
 };
+
+// End of game scenarios data structure
+
+// JavaScript to handle game logic
 
 // currentScenario is set to Start as default
 
 let currentScenario = "start";
 
 // Function to display scenario
+/**
+ * Displays the scenario based on the provided scenario key.
+ * @param {string} scenarioKey - The key of the scenario to display.
+ */
 
 function displayScenario(scenarioKey) {
   const scenario = gameScenarios[scenarioKey];
@@ -400,7 +406,6 @@ function displayScenario(scenarioKey) {
 
   // If scenario calls for roll dice, display dice button. Else, if scenario is an ending, show restart button. Else, create buttons for choices
   if (scenario.rollDice) {
-    // roll dice placeholder text to be replaced with dice image
     scenarioContent.innerHTML += 
     `<div class="dice-container" id="diceContent">
         <p class="dice-instructions">Click the dice to reveal your fate!</p>
@@ -431,6 +436,9 @@ function displayScenario(scenarioKey) {
 }
 
 // Roll dice function
+/**
+ * Simulates rolling a six-sided dice and processes the result.
+ */
 
 function rollDice() {
   let diceButton = document.querySelector(".dice-button");
@@ -454,7 +462,12 @@ function rollDice() {
   continueButton.addEventListener("click", continueAfterRoll);
 
 
-// funtion to continue after rolling dice
+// Function to continue after rolling dice
+/** 
+ * Continues the game based on the dice roll result.
+ * @param {number} diceResult - The result of the dice roll.
+ */
+
     function continueAfterRoll()  {
     const scenario = gameScenarios[currentScenario];
     if (diceResult >= scenario.successValue) {
@@ -468,6 +481,11 @@ function rollDice() {
 
 
 // Function to make user choices and move to next scenario
+/**
+ * 
+ * @param {*} nextScenarioChoice 
+ */
+
 function makeChoice(nextScenarioChoice) {
   currentScenario = nextScenarioChoice;
   displayScenario(currentScenario);
@@ -475,6 +493,10 @@ function makeChoice(nextScenarioChoice) {
 
 
 // Function to restart game by resetting to the starting scenario
+/**
+ * Restarts the game by resetting to the starting scenario.
+ */
+
 function restartGame() {
   currentScenario = "start";
   displayScenario(currentScenario);
