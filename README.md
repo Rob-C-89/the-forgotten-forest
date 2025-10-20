@@ -192,25 +192,25 @@ This function simply sets the current scenario to the ‘start’ scenario.
 
 The website has been tested on 300px to 3000px screen sizes for responsivity.
 
-**300px Screens**
+**300px Screens:**
 
 ![screenshot](https://github.com/Rob-C-89/the-forgotten-forest/blob/main/documentation/screenshot-300px.png)
 
-**576px Screens**
+**576px Screens:**
 
 A media query was created to make the header smaller on 576px and below. The audio player is also shrunk on this breakpoint for better alignment.
 
 ![screenshot](https://github.com/Rob-C-89/the-forgotten-forest/blob/main/documentation/screenshot-576px.png)
 
-**768px Screens**
+**768px Screens:**
 
 ![screenshot](https://github.com/Rob-C-89/the-forgotten-forest/blob/main/documentation/screenshot-768px.png)
 
-**1200px Screens**
+**1200px Screens:**
 
 ![screenshot](https://github.com/Rob-C-89/the-forgotten-forest/blob/main/documentation/screenshot-1200px.png)
 
-**3000px Screens and larger**
+**3000px Screens and larger:**
 
 A max-width of 1500px is set on the body to avoid overstretching the text on very large screens.
 
@@ -320,4 +320,5 @@ https://fonts.google.com/
 Dice Favicon:
 
 https://fontawesome.com/
+
 
