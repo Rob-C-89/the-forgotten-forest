@@ -1,4 +1,3 @@
-<img width="3225" height="2946" alt="image" src="https://github.com/user-attachments/assets/b9db61ba-eac4-4480-ac65-3bfcf8210775" />﻿﻿
 # The Forgotten Forest - an Interactive Fantasy Adventure
 
 ![screenshot](https://github.com/Rob-C-89/the-forgotten-forest/blob/main/documentation/forgotten-forest-fullscreen.webp)
@@ -329,6 +328,7 @@ https://fonts.google.com/
 Dice Favicon:
 
 https://fontawesome.com/
+
 
 
 
