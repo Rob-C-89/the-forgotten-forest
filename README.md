@@ -16,10 +16,10 @@ During my research, I encountered some gamebook website and templates online, wh
 
 The website will have a very simple layout:
 
--a header with title, logo and description.
--a main game content container, with HTML to be loaded with JavaScript
--an audio player
--background image on the body
+- a header with title, logo and description.
+- a main game content container, with HTML to be loaded with JavaScript
+- an audio player
+- background image on the body
 
 ### User Stories and Project Planning
 
@@ -328,6 +328,7 @@ https://fonts.google.com/
 Dice Favicon:
 
 https://fontawesome.com/
+
 
 
 
