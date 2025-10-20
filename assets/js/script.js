@@ -377,13 +377,12 @@ const gameScenarios = {
 
 // End of game scenarios data structure
 
-// JavaScript to handle game logic
+// JavaScript to handle game logic begins below
 
 // currentScenario is set to Start as default
 
 let currentScenario = "start";
 
-// Function to display scenario
 /**
  * Displays the scenario based on the provided scenario key.
  * @param {string} scenarioKey - The key of the scenario to display.
@@ -421,9 +420,8 @@ function displayScenario(scenarioKey) {
   }
 }
 
-// Roll dice function
 /**
- * Simulates rolling a six-sided dice and processes the result.
+ * Roll-dice function. Simulates rolling a six-sided dice and processes the result.
  */
 
 function rollDice() {
@@ -445,9 +443,8 @@ function rollDice() {
   let continueButton = document.querySelector(".continue-button");
   continueButton.addEventListener("click", continueAfterRoll);
 
-  // Function to continue after rolling dice
   /**
-   * Continues the game based on the dice roll result.
+   * Function to continue the game based on the dice roll result.
    * @param {number} diceResult - The result of the dice roll.
    */
 
@@ -462,9 +459,9 @@ function rollDice() {
   }
 }
 
-// Function to make user choices and move to next scenario
+
 /**
- *
+ *Function to make user choices and move to next scenario
  * @param {*} nextScenarioChoice
  */
 
@@ -473,9 +470,8 @@ function makeChoice(nextScenarioChoice) {
   displayScenario(currentScenario);
 }
 
-// Function to restart game by resetting to the starting scenario
 /**
- * Restarts the game by resetting to the starting scenario.
+ * Function to restart the game by resetting to the starting scenario.
  */
 
 function restartGame() {
@@ -483,5 +479,7 @@ function restartGame() {
   displayScenario(currentScenario);
 }
 
-// Initialize game by displaying the starting scenario
+/**
+ * Initialize game by displaying the starting scenario
+ */
 displayScenario(currentScenario);
