@@ -100,9 +100,8 @@ audio {
     text-align: center;
 }
 
-/*Media query for 1200px and above devices*/
 
-/*Re-size gallery images on large screens*/
+/*Re-size header and main h2 on smaller screens*/
 @media screen and (max-width: 576px) {
   header h1 {
         font-size: 20px ;
