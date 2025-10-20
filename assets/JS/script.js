@@ -13,7 +13,7 @@ const gameScenarios = {
     ],
   },
 
-    giveUp: {
+  giveUp: {
     title: "The End",
     text: `You decide that this adventure is not for you. You turn around and head back home, where you live a quiet life. 
     Maybe adventure isn't your calling after all.`,
@@ -34,7 +34,7 @@ const gameScenarios = {
   },
 
   // Right path scenarios
-    rightPath: {
+  rightPath: {
     title: "Your First Coin",
     text: `You follow the path to the right, your boots crunching on the twigs, leaves and the odd small animal bone. 
     After a while, you hear a metallic clink and look down. A glittering golden coin twinkles back at you. What do you do?`,
@@ -44,7 +44,7 @@ const gameScenarios = {
     ],
   },
 
-    quidsIn: {
+  quidsIn: {
     title: "Quids In",
     text: `You decide that one coin is enough for you and, besides, the Forgotten Forest is kinda giving you the heebie jeebies. 
     You turn around and head back home, where you live a quiet life. 
@@ -60,7 +60,10 @@ const gameScenarios = {
     choices: [
       { text: `"The gold is mine! Have at ye!"`, nextScenario: "oldManFight" },
       { text: `"Maybe it is, and maybe it isn't?"`, nextScenario: "riddle" },
-      { text: `"Here, take it. I don't want it."`, nextScenario: "oldManThanks" },
+      {
+        text: `"Here, take it. I don't want it."`,
+        nextScenario: "oldManThanks",
+      },
     ],
   },
 
@@ -79,132 +82,117 @@ const gameScenarios = {
     "I have a mouth but never speak, I have a bed but never sleep, I run but never walk, and I have a head but never weep. 
     What am I?"`,
     choices: [
-        { text: "A fish", nextScenario: "riddleWrong" },
-        { text: "A river", nextScenario: "riddleCorrect" },
-        { text: "A mountain", nextScenario: "riddleWrong" },
-        ],
-    },
+      { text: "A fish", nextScenario: "riddleWrong" },
+      { text: "A river", nextScenario: "riddleCorrect" },
+      { text: "A mountain", nextScenario: "riddleWrong" },
+    ],
+  },
 
-    riddleWrong: {
-        title: "Easy Come, Easy Go",
-        text: `The old man giggles. "Wrong! The answer was a river. You might want to sharpen your mind a little 
+  riddleWrong: {
+    title: "Easy Come, Easy Go",
+    text: `The old man giggles. "Wrong! The answer was a river. You might want to sharpen your mind a little 
         if you're to get anywhere in this forest! Thanks for the treasure!"
         He pulls his hand out of his robe, revealing a glittering coin in his wizened fingers. 
         You put your hands in your pocket. The coin is gone! Before you can question his trickery, 
         the old man has vanished, as quickly as he appeared. You sigh and continue on your quest`,
-        choices: [
-            { text: "Continue", nextScenario: "theTunnel" },
-        ],
-    },
+    choices: [{ text: "Continue", nextScenario: "theTunnel" }],
+  },
 
-    riddleCorrect: {
-        title: "A Wise Choice",
-        text: `The old man smiles, although his right eye twitches with a hint of disappointment. 
+  riddleCorrect: {
+    title: "A Wise Choice",
+    text: `The old man smiles, although his right eye twitches with a hint of disappointment. 
         "Correct! A river indeed. You have a sharp mind, traveller. The coin is yours. I expect we'll meet again..."
         You nod, pocket the coin and continue on your quest.`,
-        choices: [
-            { text: "Continue", nextScenario: "theTunnel" },
-        ],
-    },
+    choices: [{ text: "Continue", nextScenario: "theTunnel" }],
+  },
 
-    oldManThanks: {
+  oldManThanks: {
     title: "Kindness Rewarded",
     text: `You hand over the coin. The frail old man in his rags looks like he needs it more than you do. "You have a kind and brave heart, adventurer.
     It will protect you against many of the dangers in this forest. For everything else, take this."
     He reaches into his robe and pulls out an ornate, horned helmet of brass and silver. Stunned by the princely gift, you 
     thank the old man, put on the helmet and continue on your quest.`,
-    choices: [
-        { text: "Continue", nextScenario: "theTunnel" },
-    ],
+    choices: [{ text: "Continue", nextScenario: "theTunnel" }],
   },
 
   // Left path scenarios
-    leftPath: {
-        title: "The River",
-        text: `You follow the path to the left, leading you along the river, away from the willow tree. The forest thins out,
+  leftPath: {
+    title: "The River",
+    text: `You follow the path to the left, leading you along the river, away from the willow tree. The forest thins out,
         and you see the sky above you is blue. Feeling a little more hopeful, you come to a bridge crossing the river. What do you do?`,
-        choices: [
-          { text: "Cross the bridge", nextScenario: "trollAmbush" },
-          { text: "Sit down to enjoy a brief rest", nextScenario: "seeTroll" },
-        ],
-      },
+    choices: [
+      { text: "Cross the bridge", nextScenario: "trollAmbush" },
+      { text: "Sit down to enjoy a brief rest", nextScenario: "seeTroll" },
+    ],
+  },
 
-    trollAmbush: {
-        title: "Troll Ambush!",
-        text: `You boldly walk towards and over the stone bridge, whistling merrily. Halfway across, a giant, scaly hand grabs you by the boot.
+  trollAmbush: {
+    title: "Troll Ambush!",
+    text: `You boldly walk towards and over the stone bridge, whistling merrily. Halfway across, a giant, scaly hand grabs you by the boot.
         A troll was hiding under the bridge and is trying to pull you down into the river below! Roll a dice to determine your fate.`,
-        rollDice: true,
-        successValue: 4,
-        choices: [
-            {text: "Continue", winScenario: "trollWin", failScenario: "trollLose" },
-        ]
-        
-    },
+    rollDice: true,
+    successValue: 4,
+    choices: [
+      { text: "Continue", winScenario: "trollWin", failScenario: "trollLose" },
+    ],
+  },
 
-    trollWin: {
-        title: "I Want to Break Free",
-        text: `You struggle against the troll's grip, as it pulls you towards the water. It heaves you off the bridge, but you cling on with your 
+  trollWin: {
+    title: "I Want to Break Free",
+    text: `You struggle against the troll's grip, as it pulls you towards the water. It heaves you off the bridge, but you cling on with your 
         hands. Fighting for your very life, you kick wildly and by some chance of fate, land a powerful blow to the troll's crooked nose.
         It howls in pain and release you. You scramble back onto the bridge and flee across, once again plunging deeper into the forest`,
-        choices: [
-            { text: "Continue", nextScenario: "theTunnel" },
-        ]
-    },
+    choices: [{ text: "Continue", nextScenario: "theTunnel" }],
+  },
 
-    trollLose: {
-        title: "Troll-food",
-        text: `You struggle with all your might, but the troll is too strong. It drags you down into the river, and your adventure is at an end...`,
-        isEnding: true,
-    },
+  trollLose: {
+    title: "Troll-food",
+    text: `You struggle with all your might, but the troll is too strong. It drags you down into the river, and your adventure is at an end...`,
+    isEnding: true,
+  },
 
-    seeTroll: {
-        title: "Troll! Uh oh...",
-        text: `With your back to the trees, you take a seat on the grassy banks of the river and take your last piece of bread from your backpack.
+  seeTroll: {
+    title: "Troll! Uh oh...",
+    text: `With your back to the trees, you take a seat on the grassy banks of the river and take your last piece of bread from your backpack.
         As you chew thoughtfully and look around, you notice the hairy, scaled back of a creature crouching beneath the bridge. A troll! What do you do?`,
-        choices: [
-            { text: "Sneak away back the way you came", nextScenario: "sneakAway" },
-            { text: "Swim across the river upstream", nextScenario: "riverCross" },
-            { text: "Draw your sword and approach the bridge", nextScenario: "trollFight" },
-        ]
-    },
+    choices: [
+      { text: "Sneak away back the way you came", nextScenario: "sneakAway" },
+      { text: "Swim across the river upstream", nextScenario: "riverCross" },
+      {
+        text: "Draw your sword and approach the bridge",
+        nextScenario: "trollFight",
+      },
+    ],
+  },
 
-    
-
-    sneakAway: {
-        title: "Sneaky Does it!",
-        text: `As quietly as you can, you stand up and tiptoe back the way you came, your heart pounding beneath your chainmail shirt.
+  sneakAway: {
+    title: "Sneaky Does it!",
+    text: `As quietly as you can, you stand up and tiptoe back the way you came, your heart pounding beneath your chainmail shirt.
         Once you think youre at a safe distance, you break into a run, past the willow tree, and up the path to the right.`,
-        choices: [
-            { text: "Continue", nextScenario: "rightPath" },
-        ]
-    },
+    choices: [{ text: "Continue", nextScenario: "rightPath" }],
+  },
 
-    riverCross: {
-        title: "Discretion and the Better Part of Valour",
-        text: `Remembering a lesson from your wise but perhaps not-so-heroic uncle, you decide not to risk a full frontal assault 
+  riverCross: {
+    title: "Discretion and the Better Part of Valour",
+    text: `Remembering a lesson from your wise but perhaps not-so-heroic uncle, you decide not to risk a full frontal assault 
         on the river troll. Instead, you walk upstream a while, then lower yourself into the chilly waters. 
         To make yourself light enough to swim, you discard your chainmail shirt - a painful sacrifice, but surely less painful than
         death-by-troll. 
         You swim across the river, clamber up the opposite bank and onwards, deeper into the forest.`,
-        choices: [
-            { text: "Continue", nextScenario: "theTunnel" },
-        ]
-    },
+    choices: [{ text: "Continue", nextScenario: "theTunnel" }],
+  },
 
-
-    trollFight: {
-        title: "Surprise Attack!",
-        text: `With your sword drawn, you advance on the troll from behind. You catch the beast completely off guard, 
+  trollFight: {
+    title: "Surprise Attack!",
+    text: `With your sword drawn, you advance on the troll from behind. You catch the beast completely off guard, 
         and with almost no effort you slay the creature before it can draw its club. Wiping the green blood off your sword, you
         rifle throught a leather pouch hanging from it's neck. Inside you find five glittering gold coins and a small key.
         You pocket your loot and climb back onto the riverbank, crossing the bridge and on into the forest.`,
-        choices: [
-            { text: "Continue", nextScenario: "theTunnel" },
-        ]
-    },
+    choices: [{ text: "Continue", nextScenario: "theTunnel" }],
+  },
 
-    // Scenarios starting from the tunnel
-    theTunnel: {
+  // Scenarios starting from the tunnel
+  theTunnel: {
     title: "The Tunnel",
     text: `After hours of walking, reflecting on your adventure's trials so far, the light is beginning to fade. Just as you
     start to consider making camp for the night, you see a faint glow ahead. Approching cautiously, you come to a stone cave
@@ -212,7 +200,10 @@ const gameScenarios = {
     seems to be a tunnel leading deep into the earth. What do you do?`,
     choices: [
       { text: "Enter the tunnel", nextScenario: "theLongDark" },
-      { text: "Decide it's too dangerous and turn back", nextScenario: "giveUp" },
+      {
+        text: "Decide it's too dangerous and turn back",
+        nextScenario: "giveUp",
+      },
     ],
   },
 
@@ -239,27 +230,26 @@ const gameScenarios = {
     rollDice: true,
     successValue: 5,
     choices: [
-      {text: "Continue", winScenario: "doorSuccess", failScenario: "doorFail" },
-   ]
-
+      {
+        text: "Continue",
+        winScenario: "doorSuccess",
+        failScenario: "doorFail",
+      },
+    ],
   },
 
   doorSuccess: {
     title: "The Way is Open",
     text: `You call on all your might, straining against the ancient Dwarven structure. Just as you are about to give up, the
     door gives way. A dull light fills the tunnel, and you continue on your way`,
-    choices: [
-      {text: "Continue", nextScenario: "tunnelExit"},
-    ]
+    choices: [{ text: "Continue", nextScenario: "tunnelExit" }],
   },
 
   doorFail: {
     title: "The Way is Shut",
     text: `No matter how hard you try, the door will not budge. Defeated, you turn back the way you came. Once again, you come 
     to the fork and notice the smell of smoke coming from one way. You turn down it, and deeper into the depths`,
-    choices: [
-      {text: "Continue", nextScenario: "smoke"},
-    ]
+    choices: [{ text: "Continue", nextScenario: "smoke" }],
   },
 
   // Smoke tunnel scenarios
@@ -284,10 +274,9 @@ const gameScenarios = {
     sneaking along the ridged wall. You hear gruff voices - below you, you see a group of three goblins, huddled around a pitiful fire, 
     roasting a chunk of meat. You see an exit at the other end of the cavern. What do you do?`,
     choices: [
-      {text: "Draw your bow and attack", nextScenario: "ambushGoblins" },
-      {text: "Sneak past the goblins", nextScenario: "avoidGoblins"}
-    ]
-
+      { text: "Draw your bow and attack", nextScenario: "ambushGoblins" },
+      { text: "Sneak past the goblins", nextScenario: "avoidGoblins" },
+    ],
   },
 
   ambushGoblins: {
@@ -297,8 +286,12 @@ const gameScenarios = {
     rollDice: true,
     successValue: 3,
     choices: [
-            {text: "Continue", winScenario: "highRoadWin", failScenario: "highRoadLose" },
-    ]
+      {
+        text: "Continue",
+        winScenario: "highRoadWin",
+        failScenario: "highRoadLose",
+      },
+    ],
   },
 
   highRoadWin: {
@@ -306,9 +299,7 @@ const gameScenarios = {
     text: `You rain down arrows on the unsuspecting goblins, one after another, until your enemy lies still. They barely had
     time to ready their weapons. You feel a twinge of pity for them, but bury it as quickly as it came. It was a necessary action.
     Slingin your bow across your back, you follow the ledge path along and down, towards the exit of the cavern`,
-    choices: [
-      { text: "Continue", nextScenario: "tunnelExit"},
-    ]
+    choices: [{ text: "Continue", nextScenario: "tunnelExit" }],
   },
 
   highRoadLose: {
@@ -318,7 +309,6 @@ const gameScenarios = {
     You turn and run, although thankfully the wounded goblins do not chase you. This adventure is beyond you, and you flee
     all the way back through the tunnel, into the forest, and head for home. At least you leave with your life... `,
     isEnding: true,
-
   },
 
   avoidGoblins: {
@@ -327,9 +317,7 @@ const gameScenarios = {
     or maybe that's just the nature of their tongue. Either way, there will be no battle today, as they remain unaware of your presence.
     You sneak along the high path, which leads you down to the floor of the cavern on the other side. Rushing from rock
     to rock, you make it to the exit`,
-    choices: [
-      { text: "Continue", nextScenario: "tunnelExit"},
-    ]
+    choices: [{ text: "Continue", nextScenario: "tunnelExit" }],
   },
 
   // Low road scenarios
@@ -343,17 +331,19 @@ const gameScenarios = {
     rollDice: true,
     successValue: 5,
     choices: [
-            {text: "Continue", winScenario: "lowRoadWin", failScenario: "lowRoadLose" },
-    ]
+      {
+        text: "Continue",
+        winScenario: "lowRoadWin",
+        failScenario: "lowRoadLose",
+      },
+    ],
   },
 
   lowRoadWin: {
     title: "Against All Odds",
     text: `Fighting for your life against a greater number, you miraculously overpower your foe. Two of the goblins lie still,
     and the last flees the way you just came, screeching and crying as it runs. The way before you is clear.`,
-    choices: [
-      {text: "Continue", nextScenario: "tunnelExit"},
-    ]
+    choices: [{ text: "Continue", nextScenario: "tunnelExit" }],
   },
 
   lowRoadLose: {
@@ -372,17 +362,15 @@ const gameScenarios = {
     dark. Soon you come out and into a clearing - back in the forest. Exhausted from your adventure so far, and with the moon glowing
     above you, you decide to make camp. After pitching your tent behind the cover of some bushes, you fall down onto your roll-mat.
     Proud of your progress, you fall into a deep and dreamless sleep.`,
-    choices: [
-      {text: "Continue", nextScenario: "chapterOneEnd"},
-    ]
+    choices: [{ text: "Continue", nextScenario: "chapterOneEnd" }],
   },
 
   chapterOneEnd: {
     title: "End of Chapter One!",
-      text: `Congratulations on making it so far! This is the end of the first chapter of The Forgotten Forest. Chapter Two will be coming
+    text: `Congratulations on making it so far! This is the end of the first chapter of The Forgotten Forest. Chapter Two will be coming
       soon. In the meantime, would you like to play again?`,
     isChapterEnding: true,
-  }
+  },
 };
 
 // End of game scenarios data structure
@@ -406,26 +394,22 @@ function displayScenario(scenarioKey) {
 
   // If scenario calls for roll dice, display dice button. Else, if scenario is an ending, show restart button. Else, create buttons for choices
   if (scenario.rollDice) {
-    scenarioContent.innerHTML += 
-    `<div class="dice-container" id="diceContent">
+    scenarioContent.innerHTML += `<div class="dice-container" id="diceContent">
         <p class="dice-instructions">Click the dice to reveal your fate!</p>
         <button class="dice-button" onclick="rollDice()"></button>
         <div id="diceResult"></div>
 
-    </div>`
-
+    </div>`;
   } else if (scenario.isEnding) {
     scenarioContent.innerHTML += `<div class="ending-container" id="endingContent">
     <h2>Your adventure ends here</h2>
     <p>Would you like to play again?</p>
     <button onclick="restartGame()">Restart Game</button>
     </div>`;
-
-    } else if (scenario.isChapterEnding) {
+  } else if (scenario.isChapterEnding) {
     scenarioContent.innerHTML += `<div class="ending-container" id="endingContent">
     <button onclick="restartGame()">Restart Game</button>
     </div>`;
-
   } else {
     scenarioContent.innerHTML += `<div class="choices-container" id="choicesContent">`;
     scenario.choices.forEach((choice) => {
@@ -443,32 +427,29 @@ function displayScenario(scenarioKey) {
 function rollDice() {
   let diceButton = document.querySelector(".dice-button");
   // Remove previous disabled state if present
-  diceButton.disabled = false;  
+  diceButton.disabled = false;
   const diceResult = Math.floor(Math.random() * 6) + 1;
   const resultText = document.getElementById("diceResult");
- 
 
-  resultText.innerHTML += 
-  `<div>
+  resultText.innerHTML += `<div>
   <p>You rolled a ${diceResult}!</p>
   <button class ="continue-button">Continue</button>
   </div>`;
-  
-    // Disable button to prevent multiple rolls
+
+  // Disable button to prevent multiple rolls
   diceButton.disabled = true;
 
   // Add event listener to continue button (for continueAfterRoll function)
   let continueButton = document.querySelector(".continue-button");
   continueButton.addEventListener("click", continueAfterRoll);
 
+  // Function to continue after rolling dice
+  /**
+   * Continues the game based on the dice roll result.
+   * @param {number} diceResult - The result of the dice roll.
+   */
 
-// Function to continue after rolling dice
-/** 
- * Continues the game based on the dice roll result.
- * @param {number} diceResult - The result of the dice roll.
- */
-
-    function continueAfterRoll()  {
+  function continueAfterRoll() {
     const scenario = gameScenarios[currentScenario];
     if (diceResult >= scenario.successValue) {
       currentScenario = scenario.choices[0].winScenario;
@@ -479,18 +460,16 @@ function rollDice() {
   }
 }
 
-
 // Function to make user choices and move to next scenario
 /**
- * 
- * @param {*} nextScenarioChoice 
+ *
+ * @param {*} nextScenarioChoice
  */
 
 function makeChoice(nextScenarioChoice) {
   currentScenario = nextScenarioChoice;
   displayScenario(currentScenario);
 }
-
 
 // Function to restart game by resetting to the starting scenario
 /**
