@@ -112,6 +112,8 @@ A header is displayed, with the name, description of the website, and a wizard l
 
 An audio player is set to auto-play, on mute. It can be controlled by the user. The audio is an ambient forest background track taken from free-to-use website Epidemic Sound according to their terms of use.
 
+NB despite being muted and all code being correct, the audio does not appear to play automatically in Google Chrome or Microsoft Edge. It does autoplay in Mozilla Firefox.
+
 ![screenshot](https://github.com/Rob-C-89/the-forgotten-forest/blob/main/documentation/audio-shot.webp)
 
 
@@ -151,17 +153,12 @@ If none of the above are true, then for each ‘choice’ in the ‘choices’ a
 
 The ‘rollDice’ function:
 
- fetches the dice button by its class using a query selector
-
-un-disables so that if it was previously disabled it will function properly.
-
-creates a ‘diceResult’ constant with a value between one and six, using the Math.floor(Math.random() *6)+1 function
-
-creates innerHTML to display text, the diceResult, and a ‘continue-button’
-
-disables the button to prevent “re-rolling” the dice
-
-adds an event-listener to the ‘continue-button’, which upon click will call the ‘continueAfterRoll’ function.
+- fetches the dice button by its class using a query selector
+- un-disables so that if it was previously disabled it will function properly.
+- creates a ‘diceResult’ constant with a value between one and six, using the Math.floor(Math.random() *6)+1 function
+- creates innerHTML to display text, the diceResult, and a ‘continue-button’
+- disables the button to prevent “re-rolling” the dice
+- adds an event-listener to the ‘continue-button’, which upon click will call the ‘continueAfterRoll’ function.
 
 
 ### Continue After Roll
@@ -328,6 +325,8 @@ https://fonts.google.com/
 Dice Favicon:
 
 https://fontawesome.com/
+
+
 
 
 
