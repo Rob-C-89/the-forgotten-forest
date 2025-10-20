@@ -259,7 +259,7 @@ You can clone the repository from using the following steps:
 4. Open Git Bash or Terminal
 5. Change the current working directory to the location where you want the cloned directory.
 6. Type git clone, and then paste the URL. It will look like this:
-    * git clone https://github.com/Rob-C-89/lorna-rose-artist
+    * git clone https://github.com/Rob-C-89/the-forgotten-forest
 7. Press Enter to create your local clone.
 
 
@@ -270,7 +270,7 @@ As an alternative to cloning the repo, you may fork it to your account. This wil
 You can fork the repository using the following stepsL
 
 1. Log into your account then navigate to the repository:
-    * https://github.com/Rob-C-89/lorna-rose-artist
+    * https://github.com/Rob-C-89/the-forgotten-forest
 2. In the top-right corner of the window, you'll see a "Fork" button. 
 3. Click the Fork button to begin the forking process.
 
@@ -328,6 +328,7 @@ https://fonts.google.com/
 Dice Favicon:
 
 https://fontawesome.com/
+
 
 
 
