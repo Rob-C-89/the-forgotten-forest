@@ -118,4 +118,8 @@ audio {
     main h2 {
         font-size: 18px;
     }
+
+    audio {
+    max-width: 150px;
+}
 }
